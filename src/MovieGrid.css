@@ -1,0 +1,19 @@
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 16px;
+    background-color: #171717;
+  }
+  
+  .movie-item img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+  }
+  
+  .movie-item p {
+    color: #FFFFFF;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+  }
+  
