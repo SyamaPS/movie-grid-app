@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import HeaderWithSearch from './HeaderWithSearch'; 
+import MovieGrid from './MovieGrid'; 
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState(''); 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <HeaderWithSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      
+      {/* Pass the search query to the MovieGrid */}
+      <MovieGrid searchQuery={searchQuery} />
     </div>
   );
 }
